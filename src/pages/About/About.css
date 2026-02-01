@@ -1,0 +1,204 @@
+.About-Hero{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    background-image: url("../About/images/BGimage.png");
+}
+.img-edit{
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 600px;
+    width: 600px;
+    background-color: gray;
+    border: 4px solid rgba(50, 148, 159, 0.601);
+    padding: 50px 50px;
+}
+.About-Hero img{
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+}
+.About-Hero h1{
+    font-size: 42px;
+}
+.About-Hero p{
+    font-size: 21px;
+    color: #6f6b6be6;
+}
+.Our-Story-Mission{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    text-align: center;
+    padding: 10px 50px;
+    background: linear-gradient(180deg, rgb(250, 252, 255),rgb(185, 226, 255));
+}
+.Our-Story{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    box-shadow: 6px 7px 7px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    padding: 10px 20px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.Our-Story h2,
+.Our-Mission h2{
+    font-size: 32px;
+    margin-top: 12px;
+}
+.Our-Story p,
+.Our-Mission p{
+    font-size: 20px;
+    font-weight: 400;
+}
+.Our-Mission{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    box-shadow: 6px 7px 7px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    padding: 10px 20px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.About-Cards{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, rgb(185, 226, 255),rgb(250, 252, 255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    cursor: pointer;
+}
+.Expertise{
+    background: linear-gradient(180deg, rgb(185, 226, 255),rgb(185, 226, 255));
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    padding: 40px 20px 20px 20px;
+}
+.About-Card{
+    background-color: white;
+    box-shadow: 6px 7px 7px rgba(0,0,0,0.08);
+    text-align: center;
+    border-radius: 15px;
+    padding: 30px 40px;
+    height: 500px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    transition: all ease-in-out 0.3s;
+}
+.About-Card:hover{
+    transform: scale(1.02);
+}
+.About-Card img{
+    border-radius: 15px;
+    box-shadow: 3px 2px 2px rgba(68, 67, 67, 0.09);
+    height: 300px;
+    object-fit: cover;
+}
+.About-Card h3{
+    font-size: 40px;
+    font-weight: 500;
+}
+.About-Card p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@media(max-width:768px){
+    .About-Hero{
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+    }
+    .About-Hero h1{
+        font-size: 26px;
+    }
+    .About-Hero p{
+        font-size: 14px;
+        text-align: center;
+    }
+    .img-edit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        width: 410px;
+        padding: 50px 50px;
+    }
+    .About-Hero img{
+        height: 290px;
+        width: 310px;
+    }
+    .Our-Story-Mission{
+        height: auto;
+        width: 100%;
+        display: flex;
+        margin-top: 40px;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .Our-Story, 
+    .Our-Mission{
+        height: auto;
+        width: 100%;
+        gap: 10px;
+    }
+    .Our-Story h2, 
+    .Our-Mission h2{
+        font-size: 18px;
+    }
+    .Our-Story p, 
+    .Our-Mission p{
+        font-size: 14px;
+    }
+    .About-Cards{
+        padding: 20px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        width: 100%;
+    }
+    .About-Card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 400px;
+        width: 300px;
+    }
+    .About-Card:hover{
+        transform: scale(1);
+    }
+    .About-Card img{
+        height: fit-content;
+    }
+    .About-Card .About-Card-Content h3{
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 70px;    
+    }
+    .About-Card .About-Card-Content p{
+        font-size: 14px;
+    }
+    .Expertise{
+        font-size: 32px;
+        font-weight:700;
+    }
+}

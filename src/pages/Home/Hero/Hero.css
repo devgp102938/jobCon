@@ -1,0 +1,74 @@
+.Hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(180deg, white,rgb(250, 252, 255));
+    height: 100vh;
+    width: 100%;
+    padding: 40px;
+    gap: 40px;
+    background-image: url("../Hero/images/BGimage.png");
+}
+.Left-Section{
+    flex: 0.7;
+}
+.Left-Section h2{
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.Left-Section P{
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: rgba(62, 62, 62, 0.695);
+}
+.Left-Section button{
+    padding: 5px 10px;
+    border: none;
+    background-color: #060606;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all ease-in-out 0.3s;
+}
+button:hover{
+    background-color: #515151;
+}
+.Right-Section{
+    flex:1;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;   
+    scrollbar-width: none; 
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+.Right-Section img{
+    width: 320px;
+    height: 580px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+@media(max-width:768px){
+    .Hero{
+        flex-direction: column;
+        padding: 30px 16px;
+        text-align: center;
+    }
+    .Left-Section h2{
+        font-size: 28px;
+    }
+    .Left-Section p{
+        font-size: 14px;
+    }
+    .Right-Section{
+        width: 100%;
+    }
+    .Right-Section img{
+        width: 180%;
+        object-fit: cover;
+        height: 100%;
+    }
+}

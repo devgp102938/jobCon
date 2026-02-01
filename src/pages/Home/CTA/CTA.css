@@ -1,0 +1,36 @@
+.CTA{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg,rgb(185, 226, 255), white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 300px;
+}
+.CTA h2{
+    font-weight: 700;
+    font-size: 28px;
+}
+.CTA button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+.CTA button:hover{
+    background-color: gray;
+    transform: scale(1.1);
+    
+}
+
+@media(max-width: 768px){
+    .CTA h2{
+        font-size: 18px;
+    }
+}

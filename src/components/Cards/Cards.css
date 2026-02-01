@@ -1,0 +1,171 @@
+.card{
+  height: 400px;
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.top{
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+}
+.top img{
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: 1px solid #c9c0c0;
+  padding: 5px;
+}
+.top button{
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  border: 1px solid #dadada;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  color: black;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+.top button:hover{
+  background-color: #b1b1b1;
+}
+.center h3{
+  font-size: 22px;
+  font-weight: 500;
+}
+.center span{
+  font-size: 11px;
+  font-weight: 500;
+}
+.center h2{
+  font-size: 26px;
+  font-weight: 600;
+}
+.center .tags{
+  display: flex;
+  margin-top: 10px;
+  gap: 7px;
+}
+.center .tags h4{
+  border: 1px solid #dadada;
+  background-color: #dadada ;
+  border-radius: 10px;
+  color: #000000;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+}
+.center .btn_txt p{
+  color:#b1b1b1;
+}
+.center .btn_txt li{
+  list-style: none;
+  color: #000000;
+}
+.bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #b1b1b1;
+  padding-top: 20px;
+}
+.bottom button{
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  border: 1px solid #dadada;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+.bottom button:hover{
+  background-color: #b1b1b1;
+  transform: scale(1.05);
+}
+.detail-btn{
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.Apply-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.Apply{
+  background: white;
+  width: 90%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeIn 0.3s ease;
+}
+.Apply input,
+.Apply textarea{
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: none;
+}
+.Apply-btns{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.Submit{
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.cancel{
+  background: #ccc;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+@media(max-width:768px){
+  .card{
+    height: 350px;
+    width: 300px;
+  }
+  .Apply{
+    width: 70%;
+    max-width: 350px;
+    padding: 20px;
+  }
+  .Apply input,
+  .Apply textarea{
+    padding: 8px;
+  }
+  .Submit{
+    font-size: 12px;
+  }
+  .cancel{
+    font-size: 12px;
+  }
+}

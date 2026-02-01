@@ -1,0 +1,70 @@
+.Whyjobcon{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, rgb(250, 252, 255),rgb(185, 226, 255));
+}
+.Whyjobcon h2{
+    text-align: center;
+    font-weight: 800;
+    font-size: 28px;
+}
+.Why-cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 70px 100px;
+}
+.Why-card{
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: center;
+    height: 400px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    gap: 10px;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+.Why-card img{
+    height: 300px;
+    width: 270px;
+    border-radius: 15px;
+}
+.Why-card h3{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+.Why-card:hover{
+    box-shadow: 2px 2px 2px rgb(168, 158, 158);
+    transform: scale(1.1); 
+}
+
+@media(max-width: 768px){
+    .Whyjobcon{
+        padding: 60px;
+        text-align: center;
+        height: auto;
+    }
+    .Why-cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 40px;
+    }
+    .Why-card{
+        padding: 20px;
+        border-radius: 12px;
+    }
+    .Why-card img{
+        height: 200px;
+        width: 230px;
+    }
+    .Why-card:hover{
+        transform: scale(1); 
+    }
+}

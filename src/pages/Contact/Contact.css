@@ -1,0 +1,110 @@
+.Contact{
+    height: auto;
+    width: 100%;
+    padding: 60px 80px;
+    background-color: #f5f7fa;
+    background-image: url("../Contact/images/BGimage.png")
+}
+.Contact-head{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.Contact-head h1{
+    font-size:40px;
+}
+.Contact-Hero{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 60px;
+}
+.Jobcon-Contact{
+    flex: 0.9;
+}
+.Jobcon-Contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding-right: 20px;
+}
+.Jobcon-Contact strong{
+    font-weight: 600;
+}
+.Jobcon-Contact h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.Jobcon-Contact p{
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+.Contact-Form{
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.Contact-Form form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;   
+    width: 500px;
+}
+.Contact-Form input,
+.Contact-Form textarea {
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.3s ease;
+    resize: none;
+    transition: all ease-in-out 0.3;
+}
+.Contact-Form input:focus,
+.Contact-Form textarea:focus{
+    border-radius: 12px;
+}
+.Contact-Form button {
+  padding: 14px;
+  background-color: black;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+.Contact-Form button:hover {
+  background-color: gray;
+  transform: translateY(-2px);
+}
+
+@media(max-width:768px){
+    .Contact{
+        padding: 40px 20px;
+    }
+    .Contact-head h1{
+    font-size: 32px;
+    }
+    .Contact-Hero{
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .Jobcon-Contact{
+        padding-right: 0;
+        text-align: center;
+    }
+    .Jobcon-Contact h2{
+        font-size: 26px;
+    }
+    .Jobcon-Contact p{
+        font-size: 18px;
+    }
+    .Contact-Form{
+        padding: 30px 20px;
+    }
+    .Contact-Form form{
+        width: 100%;
+    }
+}
