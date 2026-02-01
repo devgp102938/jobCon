@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import {Bookmark} from 'lucide-react'
-import "./cards.css"
+import "./Cards.css"
 
 function Cards({id, logo, company, posted, role, mode, mode2, salary, location, perks}){
 
