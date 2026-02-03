@@ -26,6 +26,7 @@ Filter by job type
 Reset filters functionality
 Real-time filtering using derived state
 Job Cards
+Data validation in Apply form and contact form
 Reusable card component
 Toggle job details (Show / Hide)
 Display salary, location, and perks
@@ -68,6 +69,7 @@ Modal implementation
 Event handling and propagation control
 Responsive layout design
 Clean folder structuring
+Data validation using basic conditioning and Alert messages
 
 Future Enhancements:
 

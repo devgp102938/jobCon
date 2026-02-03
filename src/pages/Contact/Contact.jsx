@@ -1,8 +1,48 @@
 import Navbar from "../../components/Navbar/Navbar.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import "./Contact.css"
+import { useState } from "react";
 function Contact(){
 
+    const [CformData, setCformData] = useState({
+        name : "",
+        email : "",
+        comment : ""
+    })
+
+    function handleChange(e){
+        setCformData({
+        ...CformData,
+        [e.target.name] : e.target.value
+    });
+    }
+
+    function handleSubmit(e){
+
+        e.preventDefault();
+
+        if(!CformData.name || !CformData.email || !CformData.comment){
+            alert("Enter all Information please for better support.");
+            return;
+        }
+        if(!CformData.email.includes("@") || !CformData.email.includes(".")){
+            alert("Enter valid Email Address.");
+            return;
+        }
+        if(CformData.comment.length < 25){
+            alert("Enter Proper Query.");
+            return;
+        }
+        
+        alert(`Hello ${CformData.name}, \n Your comment has been sent we will contact you, shortly regarding your request on matter with given Email: ${CformData.email}`);
+
+        setCformData({
+            name : "",
+            email : "",
+            comment : ""
+        })
+
+    }
     return(<>
         <Navbar />
         <div className="Contact fade-in">
@@ -22,10 +62,10 @@ function Contact(){
                 </div>
                 <div className="Contact-Form">
                     <form>
-                        <input type="text" placeholder="Your name...." required/>
-                        <input type="email" placeholder="Your email...." required/>
-                        <textarea placeholder="ANY COMMENTS..." rows="5"></textarea>
-                        <button type="submit">Submit</button>
+                        <input type="text" name="name" placeholder="Your name...." value={CformData.name} onChange={handleChange} required/>
+                        <input type="email" name="email" placeholder="Your email...." value={CformData.email} onChange={handleChange} required/>
+                        <textarea name="comment" placeholder="ANY COMMENTS..." rows="5" value={CformData.comment}onChange={handleChange}></textarea>
+                        <button type="submit" onClick={handleSubmit}>Submit</button>
                     </form>
                 </div>
             </div>
