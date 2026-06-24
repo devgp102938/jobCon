@@ -1,7 +1,6 @@
 const User = require('../models/User.js')
 const bcrypt = require('bcrypt');
 const jwt= require('jsonwebtoken');
-const user = require('../models/User.js');
 
 //register user
 const registerUser = async (req, res) => {
@@ -46,6 +45,7 @@ const registerUser = async (req, res) => {
             httpOnly : true,
             maxAge : 24 * 60 * 60 * 1000,
         });
+        
         return res.status(201).json({
             success : true,
             message : "user registed successfully",
