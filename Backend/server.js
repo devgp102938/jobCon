@@ -5,6 +5,7 @@ const app = express();
 const connectDB = require('./config/db.js');
 const authRoutes = require('./routes/authRoutes.js');
 const userRoutes = require('./routes/userRoutes.js');
+const jobRoutes = require('./routes/jobRoutes.js');
 const cookieParser = require('cookie-parser');
 connectDB();
 
@@ -13,6 +14,7 @@ app.use(cookieParser());
 
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/jobs', jobRoutes);
 
 
 app.listen(process.env.PORT, () => {
