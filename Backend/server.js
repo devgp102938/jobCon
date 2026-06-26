@@ -8,6 +8,7 @@ const authRoutes = require('./routes/authRoutes.js');
 const userRoutes = require('./routes/userRoutes.js');
 const jobRoutes = require('./routes/jobRoutes.js');
 const contactRoute = require('./routes/contactRoutes.js');
+const applicationRoute = require('./routes/applicationRoutes.js');
 const cookieParser = require('cookie-parser');
 connectDB();
 
@@ -23,6 +24,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/jobs', jobRoutes);
 app.use('/api/contact', contactRoute);
+app.use('/api/applications', applicationRoute);
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is runnign on ${process.env.PORT}`);
