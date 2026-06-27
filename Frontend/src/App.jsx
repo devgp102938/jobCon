@@ -4,6 +4,8 @@ import Jobs from "../src/pages/Jobs/Jobs.jsx"
 import Contact from "../src/pages/Contact/Contact.jsx"
 import About from "../src/pages/About/About.jsx"
 import ScrollToTop from "../src/components/ScrollToTop.jsx";
+import Login from "./components/Login/Login.jsx"
+import Signup from "./components/Signup/Signup.jsx"
 import './index.css'
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
           <Route path = "/Jobs" element={<Jobs />}/>
           <Route path = "/Contact" element={<Contact />} />
           <Route path = "/About" element={<About />} />
+          <Route path = "/Login" element={<Login />} />
+          <Route path = "/Signup" element={<Signup />} />
         </Routes>
       </>
   );

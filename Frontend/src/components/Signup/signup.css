@@ -1,0 +1,64 @@
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Signup-Form{
+    border: 3px solid rgba(50, 148, 159, 0.601);
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 12px;
+    height: auto;
+    width: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.Signup-title{
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.Signup-details{
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    padding: 2px;
+}
+.Signup-details input{
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    resize: none;
+    transition: all ease-in-out 0.3;
+    height: 32px;
+    width: 270px;
+}
+.Signup-details input:focus{
+    border-radius: 12px;
+}
+.register{
+    padding: 14px;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s ease;
+    width: 270px;
+}
+.button :hover{
+    background-color: gray;
+    transform: translateY(-2px);
+}
+.Signup-details p{
+    padding: 14px;
+    margin-top: 14px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.Signup-details a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}

@@ -1,0 +1,68 @@
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../Login/images/image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.Login-Form{
+    border: 3px solid rgba(50, 148, 159, 0.601);
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 12px;
+    height: auto;
+    width: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.title{
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.Login-details{
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    padding: 2px;
+}
+.Login-details input{
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    resize: none;
+    transition: all ease-in-out 0.3;
+    height: 32px;
+    width: 270px;
+}
+.Login-details input:focus{
+    border-radius: 12px;
+}
+.submit{
+    padding: 14px;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s ease;
+    width: 270px;
+}
+.Login-details p{
+    padding: 14px;
+    margin-top: 14px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.Login-details a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.submit :hover{
+    background-color: gray;
+    transform: translateY(-2px);
+}

@@ -40,6 +40,7 @@
     margin-bottom: 12px;
 }
 .Contact-Form{
+    border: 3px solid rgba(50, 148, 159, 0.601);
     background: white;
     padding: 40px;
     border-radius: 12px;
