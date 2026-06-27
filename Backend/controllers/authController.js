@@ -125,6 +125,7 @@ const loginUser = async (req, res) => {
     }
 }
 
+//logput
 const logoutUser = async (req, res) => {
     try
     {
@@ -146,8 +147,25 @@ const logoutUser = async (req, res) => {
     }
 }
 
+//getme
+const getMe = async (req, res) => {
+    try
+    {
+        res.status(200).json({
+            success : true,
+            user : req.user
+        });
+    }
+    catch(err)
+    {
+        res.status(500).json({
+            message : err.message
+        })
+    }
+}
 module.exports = {
     registerUser,
     loginUser,
     logoutUser,
+    getMe,
 }
