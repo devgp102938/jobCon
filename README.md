@@ -34,7 +34,9 @@ Frontend: https://lnkd.in/dbEiHJcj
 Backend API: https://jobcon-gofl.onrender.com
 
 ⚙️ Installation (Local Setup)
-git clone https://github.com/Yourusername/jobcon.git
+1. Clone the repository
+2. Install dependencies
+3. Run backend & frontend
 
 Backend setup
 cd backend
@@ -42,9 +44,6 @@ npm install
 npm run dev
 
 create .env(IMP)
-PORT=5000
-MONGO_URI=your_mongo_uri
-JWT_SECRET=your_secret
 
 Frontend setup
 cd frontend
