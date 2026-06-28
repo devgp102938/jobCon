@@ -29,7 +29,7 @@ function Navbar() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/auth/me", 
+    fetch(`${import.meta.env.VITE_API_URL}/api/auth/me`, 
       {
         credentials : "include"
       })
@@ -49,7 +49,7 @@ function Navbar() {
 
   const handleLogout = async () => {
     await fetch(
-      "http://localhost:3000/api/auth/logout",
+      `${import.meta.env.VITE_API_URL}/api/auth/logout`,
       {
         method : "POST",
         credentials : "include"
