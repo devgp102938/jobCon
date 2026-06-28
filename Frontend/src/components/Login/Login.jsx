@@ -42,12 +42,12 @@ function Login(){
                 navigate("/");
             }
             else{
-                alert("data.message");
+                alert(data.message);
             }
         }
         catch(err)
         {   
-            console.long(err);
+            console.log(err);
         }
     };
 

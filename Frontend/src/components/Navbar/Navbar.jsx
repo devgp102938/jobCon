@@ -29,23 +29,23 @@ function Navbar() {
   }, []);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/auth/me`, 
-      {
-        credentials : "include"
-      })
-      .then((res) => {
-        if(!res.ok){return null}
-        else{return res.json();}
-      })
-      .then((data) => {
-        if(data){
-          setUser(data.user);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-  }, []);
+    const getUser = async () => {
+    try {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/me`, {
+        credentials: "include"
+      });
+
+      if (!res.ok) return;
+
+      const data = await res.json();
+      setUser(data.user);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  getUser();
+}, []);
 
   const handleLogout = async () => {
     await fetch(
