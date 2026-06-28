@@ -13,6 +13,8 @@ const errorMiddlware = require('./middleware/errorMiddleware.js');
 const cookieParser = require('cookie-parser');
 connectDB();
 
+app.set("trust proxy", 1);
+
 app.use(cors({
     origin : "https://job-con-umber.vercel.app",
     credentials : true,
