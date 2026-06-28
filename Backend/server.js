@@ -14,7 +14,7 @@ const cookieParser = require('cookie-parser');
 connectDB();
 
 app.use(cors({
-    origin : "http://localhost:5173",
+    origin : "https://job-con-umber.vercel.app/",
     credentials : true
 }))
 
