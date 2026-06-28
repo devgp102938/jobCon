@@ -9,6 +9,7 @@ const userRoutes = require('./routes/userRoutes.js');
 const jobRoutes = require('./routes/jobRoutes.js');
 const contactRoute = require('./routes/contactRoutes.js');
 const applicationRoute = require('./routes/applicationRoutes.js');
+const errorMiddlware = require('./middleware/errorMiddleware.js');
 const cookieParser = require('cookie-parser');
 connectDB();
 
@@ -19,6 +20,8 @@ app.use(cors({
 
 app.use(express.json());
 app.use(cookieParser());
+
+app.use(errorMiddlware);
 
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
