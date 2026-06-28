@@ -46,7 +46,7 @@ function Cards({ _id, logo, company, posted, role, mode, mode2, salary, location
     }
 
     const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/application/${_id}`,
+        `/api/application/${_id}`,
         {
             method: "POST",
             credentials: "include",

@@ -19,7 +19,7 @@ function Jobs(){
  
   useEffect(() => {
     fetch(
-      `${import.meta.env.VITE_API_URL}/api/jobs?search=${searchRole}&location=${locationFilter}&employmentType=${typeFilter}`
+      `/api/jobs?search=${searchRole}&location=${locationFilter}&employmentType=${typeFilter}`
     )
     .then((res) => res.json())
     .then((data) => {

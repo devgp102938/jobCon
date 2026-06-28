@@ -33,7 +33,7 @@ function Navbar() {
   useEffect(() => {
     const getUser = async () => {
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/me`, {
+      const res = await fetch(`/api/auth/me`, {
         credentials: "include"
       });
       const data = await res.json();
@@ -48,7 +48,7 @@ function Navbar() {
 
   const handleLogout = async () => {
     await fetch(
-      `${import.meta.env.VITE_API_URL}/api/auth/logout`,
+      `/api/auth/logout`,
       {
         method : "POST",
         credentials : "include"
