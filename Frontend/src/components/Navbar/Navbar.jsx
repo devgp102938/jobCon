@@ -4,6 +4,7 @@ import "./Navbar.css";
 import { FaUserCircle } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Navbar() {
 
@@ -12,6 +13,7 @@ function Navbar() {
 
   const menuref = useRef(null);
 
+  const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -26,7 +28,7 @@ function Navbar() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [location.pathname]);
 
   useEffect(() => {
     const getUser = async () => {
@@ -34,9 +36,6 @@ function Navbar() {
       const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/me`, {
         credentials: "include"
       });
-
-      if (!res.ok) return;
-
       const data = await res.json();
       setUser(data.user);
     } catch (err) {
