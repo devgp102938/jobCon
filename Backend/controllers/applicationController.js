@@ -1,5 +1,6 @@
 const Application = require('../models/Application.js');
 const Job = require('../models/Job.js');
+const User = require('../models/User.js');
 
 const applyApplication = async (req, res) => {
     try
@@ -65,7 +66,19 @@ const getMyApplication = async (req, res) => {
     }
 };
 
+const getAllApplication = async (req, res) => {
+    const applications = await Application.find()
+    .populate("user")
+    .populate("job");
+
+    res.status(200).json({
+        success: true,
+        applications,
+    });
+}
+
 module.exports = {
     applyApplication,
     getMyApplication,
+    getAllApplication,
 }

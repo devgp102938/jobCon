@@ -24,7 +24,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/jobs', jobRoutes);
 app.use('/api/contact', contactRoute);
-app.use('/api/applications', applicationRoute);
+app.use('/api/application', applicationRoute);
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is runnign on ${process.env.PORT}`);

@@ -1,8 +1,9 @@
 import {useState} from 'react'
 import { Bookmark} from 'lucide-react'
 import "./Cards.css"
+import { useNavigate } from 'react-router-dom';
 
-function Cards({id, logo, company, posted, role, mode, mode2, salary, location, perks}){
+function Cards({ _id, logo, company, posted, role, mode, mode2, salary, location, perks}){
 
     const [showDetail, setShowDetails] = useState(false);
     const [open, setOpen] = useState(false);
@@ -14,6 +15,12 @@ function Cards({id, logo, company, posted, role, mode, mode2, salary, location, 
         }
     );
 
+    const navigate = useNavigate();
+
+    const handleOnlyApply = async () => {
+        setOpen(true);
+    }
+
     function handleChange(e) {
         setFormData({
             ...formData,
@@ -21,31 +28,53 @@ function Cards({id, logo, company, posted, role, mode, mode2, salary, location, 
         });
     }
     
-    function handleSubmit(){
+   const handleSubmit = async () => {
+    console.log(_id);
+    if (!formData.name || !formData.email || !formData.message) {
+        alert("All fields are required");
+        return;
+    }
 
-        if(!formData.name || !formData.email || !formData.message){
-            alert("All fields are required");
-            return;
+    if (!formData.email.includes("@") || !formData.email.includes(".")) {
+        alert("Enter valid Email Address");
+        return;
+    }
+
+    if (formData.message.length < 10) {
+        alert("Please tell us specifically why you are a good fit!");
+        return;
+    }
+
+    const res = await fetch(
+        `http://localhost:3000/api/application/${_id}`,
+        {
+            method: "POST",
+            credentials: "include",
         }
-        if(!formData.email.includes("@") || !formData.email.includes(".")){
-            alert("Enter valid Email Address");
-            return;
-        }
-        if(formData.message.length < 10){
-            alert("Please tell us pecifiaclly why you are a good fit!");
-            return;
-        }
-        alert(`Hello ${formData.name}, Your application for Job inquiry Role: ${role} has been registered for ${company}.
-             \n Our Team will Contact you soon on ${formData.email}!`);
+    );
+
+    if (res.status === 401) {
+        alert("Please login first");
+        navigate("/Login");
+        return;
+    }
+
+    const data = await res.json();
+
+    if (res.ok) {
+        alert(data.message);
 
         setFormData({
-            name : "",
-            email : "",
-            message : ""
+            name: "",
+            email: "",
+            message: "",
         });
 
         setOpen(false);
+    } else {
+        alert(data.message);
     }
+};
 
     return(
         <>
@@ -103,7 +132,7 @@ function Cards({id, logo, company, posted, role, mode, mode2, salary, location, 
                         {showDetail ? "Hide Details" : "Show Details"}
                     </button>
                 </div>
-                    <button onClick={() => setOpen(true)}>Apply now</button>
+                    <button onClick={handleOnlyApply}>Apply now</button>
                 </div>
         </div>
     </>

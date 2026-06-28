@@ -2,11 +2,11 @@ import Navbar from "../../components/Navbar/Navbar.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import "./Contact.css"
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 function Contact(){
 
     const [CformData, setCformData] = useState({
-        name : "",
-        email : "",
         comment : ""
     })
 
@@ -17,28 +17,39 @@ function Contact(){
     });
     }
 
-    function handleSubmit(e){
+    const navigate = useNavigate();
+
+    const handleSubmit = async (e) => {
 
         e.preventDefault();
-
-        if(!CformData.name || !CformData.email || !CformData.comment){
-            alert("Enter all Information please for better support.");
-            return;
-        }
-        if(!CformData.email.includes("@") || !CformData.email.includes(".")){
-            alert("Enter valid Email Address.");
-            return;
-        }
+                
         if(CformData.comment.length < 25){
             alert("Enter Proper Query.");
             return;
         }
         
-        alert(`Hello ${CformData.name}, \n Your comment has been sent we will contact you, shortly regarding your request on matter with given Email: ${CformData.email}`);
-
+        const res = await fetch(
+            `http://localhost:3000/api/contact`,
+            {
+                method : "POST",
+                headers : {
+                    'Content-Type' : 'application/json'
+                },
+                credentials : "include",
+                body : JSON.stringify({
+                    message : CformData.comment
+                }),
+            }
+        );
+        if(res.status == 401){
+            alert("log in first");  
+            navigate('/Login');
+            return;
+        }
+        const data = await res.json();
+        alert(data.message);
+        
         setCformData({
-            name : "",
-            email : "",
             comment : ""
         })
 
@@ -62,9 +73,9 @@ function Contact(){
                 </div>
                 <div className="Contact-Form">
                     <form>
-                        <input type="text" name="name" placeholder="Your name...." value={CformData.name} onChange={handleChange} required/>
-                        <input type="email" name="email" placeholder="Your email...." value={CformData.email} onChange={handleChange} required/>
-                        <textarea name="comment" placeholder="ANY COMMENTS..." rows="5" value={CformData.comment}onChange={handleChange}></textarea>
+                        <input type="text" name="name" placeholder="Your name...."  onChange={handleChange} required/>
+                        <input type="email" name="email" placeholder="Your email...." onChange={handleChange} required/>
+                        <textarea name="comment" placeholder="ANY COMMENTS..." rows="5" value={CformData.comment} onChange={handleChange}></textarea>
                         <button type="submit" onClick={handleSubmit}>Submit</button>
                     </form>
                 </div>

@@ -18,8 +18,8 @@ const contactInfo = async (req, res) => {
 
         res.status(201).json({
             success : true,
-            messagae : "Massege have Sent!",
-            Contact,
+            message : "Massege have Sent!",
+            contact,
         });
     }
     catch(err)
