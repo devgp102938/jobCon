@@ -70,3 +70,4 @@ Recruiter dashboard
 Email notifications
 Resume upload system
 Advanced admin analytics
+<img width="1906" height="1006" alt="Screenshot 2026-06-29 094302" src="https://github.com/user-attachments/assets/72bd3590-853b-480a-a82b-730e9c449b1f" />
