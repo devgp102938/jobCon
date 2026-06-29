@@ -71,3 +71,9 @@ Email notifications
 Resume upload system
 Advanced admin analytics
 <img width="1906" height="1006" alt="Screenshot 2026-06-29 094302" src="https://github.com/user-attachments/assets/72bd3590-853b-480a-a82b-730e9c449b1f" />
+<img width="1920" height="1020" alt="Screenshot 2026-06-29 100438" src="https://github.com/user-attachments/assets/fb8b9f42-c118-4fbe-b864-6da4e4db7aa6" />
+<img width="1906" height="1006" alt="Screenshot 2026-06-29 094320" src="https://github.com/user-attachments/assets/6c8bb08f-d2ad-4264-b736-6a502655f665" />
+<img width="1906" height="1006" alt="Screenshot 2026-06-29 094327" src="https://github.com/user-attachments/assets/ce397201-3cb5-4974-a7bb-abaa20c6770b" />
+<img width="1906" height="1006" alt="Screenshot 2026-06-29 094340" src="https://github.com/user-attachments/assets/037996da-cf5f-4449-97d9-2ac9b0f6e8be" />
+<img width="1906" height="1006" alt="Screenshot 2026-06-29 094346" src="https://github.com/user-attachments/assets/7e07a35b-3da5-4740-86c5-c4843a62854e" />
+
